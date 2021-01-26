@@ -18,6 +18,15 @@ import datetime
         # \nCo-author -> empty
 # Add path to git repo
 
+# Select Branch
+# branch = input("Select branch (enter for current): ")
+# os.system(f"git checkout {branch}")
+
+sprint_number = input("Sprint Number: ")
+year, month, day = input("Start date (YYYY MM DD): ").split()
+start_date = datetime.date(int(year), int(month), int(day))
+year, month, day = input("Finish date (YYYY MM DD): ").split()
+finish_date = datetime.date(int(year), int(month), int(day))
 
 content = []
 with open('log.json') as fp:
@@ -26,9 +35,9 @@ with open('log.json') as fp:
 contr = {}
 
 # Sprint start and finish dates
-sprint_number = 5
-start_date = datetime.date(2020, 10, 1)
-finish_date = datetime.date(2020, 10, 8)
+# sprint_number = 5
+# start_date = datetime.date(2020, 10, 1)
+# finish_date = datetime.date(2020, 10, 8)
 
 # Iterates over all commits
 for item in data:
